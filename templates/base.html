@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>URL Converter - {% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="../static/main.css">
+        <script src="../static/main.js"></script>
+        <link rel="stylesheet" href="../static/nav.css">
+    </head>
+    <body>
+        <header>  
+            <nav>  
+            <ul>  
+            <li>  
+            <a href="/"> Home </a>  
+            </li>  
+            <li>  
+            <a href="/custom"> Custom URL </a>  
+            </li>  
+            <li>  
+            <a href="/list"> List </a>  
+            </li>  
+            <li> <a href="/terms"> Terms of use </a>  
+            </li>   
+            </ul>  
+            </nav>  
+            </header>  
+        <h1>
+            <a href="/" style="text-decoration: none; color: black;">URL Converter 1.0</a>
+        </h1>
+        <hr>
+        <br>
+        {% block body %}
+        {% endblock %}
+    </body>
+</html>

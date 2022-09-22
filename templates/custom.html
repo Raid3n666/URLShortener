@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Custom URL{% endblock %}
+{% block body %}
+<h3>Custom URL Maker</h3><br>
+<form method="POST">
+    <p style="color:gray ;">URL must start with "https://"</p>
+    <input type="text" name="target" placeholder="Target URL here..."><br>
+    <p style="color:gray ;">Must contain between 4 - 12 characters (example : "google")</p>
+    <input type="text" name="custom" placeholder="Custom URL here..."><br>
+    <br><input type="submit" value="MAKE URL">
+</form>
+<p>{{ status }}</p>
+{% for message in get_flashed_messages() %}
+<p id="good"><a href="{{ message }}.shorturl">localhost/{{ message }}.shorturl</a><p>
+{% endfor %}
+{% endblock %}

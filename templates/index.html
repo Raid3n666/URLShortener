@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Short URL{% endblock %}
+{% block body %}
+<h3>URL SHORTENER</h3><br>
+<p style="color:gray ;">URL must start with "https://"</p>
+<form method="POST">
+    <input type="text" name="target" placeholder="URL here...">
+    <input type="submit" value="Get Short Url">
+</form>
+{% for message in get_flashed_messages() %}
+<p id="bad">{{ message }}<p>
+{% endfor %}
+<p id="copied"></p>
+{% if url %}
+<h3>URL</h3>
+<p><a href="{{ url }}.shorturl" id="copy">localhost/{{ url }}.shorturl</a><p>
+<button onclick="copyEvent('copy')">Copy URL</button>
+{% endif %}
+{% endblock %}
+
